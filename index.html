@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Empório Convento</title>
+
+    <meta name="description"
+        content="Restaurante Empório Convento — cozinha caseira capixaba. Cardápio, reservas pelo WhatsApp e localização.">
+    <meta name="keywords" content="restaurante, Vila Velha, capixaba, almoço, reservas">
+
+
+    <!-- Fonts (troca fácil): Kalam = traço manuscrito; Oswald = alternativa sólida -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Oswald:wght@500;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+
+
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <header id="topo" class="navbar" aria-label="Navegação principal">
+        <nav class="nav-inner">
+            <a class="brand" href="#topo" aria-label="Empório Convento">
+                <img src="img/logo.png" alt="Logo Empório Convento" class="brand-logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="#info" class="nav-link">Info</a></li>
+                <li><a href="#menu" class="nav-link">Menu</a></li>
+                <li><a href="#reservas" class="nav-link">Reservas</a></li>
+                <li><a href="#contato" class="nav-link">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- BANNER -->
+    <section class="hero-banner">
+        <img class="hero-sky" src="img/cielo.png" alt="" aria-hidden="true" />
+        <div class="hero-content">
+            <a href="#menu" class="cta">Menu</a>
+        </div>
+        <img src="img/bannertransparente.png" alt="Convento e coqueiros" class="hero-figure">
+        <div class="hero-title">
+            <h1><span class="emp">Empório</span>
+            <span class="conv">Convento</span></h1>
+            <p>Cozinha capixaba com sabor de casa</p>
+        </div>
+    </section>
+
+
+    <!-- ============ MENU ZIGZAG (estilo Via Real) ============ -->
+    <section id="menu" class="zig-menu" aria-label="Cardápio">
+        <div class="zig-wrap">
+    
+            <h2 class="zig-section-title">Entradas</h2>
+    
+            <!-- ENTRADA 1 -->
+            <article class="zig-row">
+                <div class="zig-media">
+                    <img src="img/Entrante1.png" alt="Peixe empanado com pesto, mel picante e parmesão"
+                        loading="lazy" width="1280" height="720">
+                </div>
+                <div class="zig-body">
+                    <h3 class="zig-title">Peixe Empanado</h3>
+                    <p class="zig-desc">
+                        Filé de pescada empanado acompanha pesto, mel picante e parmesão.
+                    </p>
+                    <div class="zig-price">— R$ 45 —</div>
+                </div>
+            </article>
+    
+            <!-- ENTRADA 2 (imagen a la derecha) -->
+            <article class="zig-row is-right">
+                <div class="zig-media">
+                    <img src="img/Entrante2.png" alt="Batata frita 300g com aioli de pápricas"
+                        loading="lazy" width="1280" height="720">
+                </div>
+                <div class="zig-body">
+                    <h3 class="zig-title">Batata Frita (300g)</h3>
+                    <p class="zig-desc">
+                        Acompanha aioli de mix de pápricas.
+                    </p>
+                    <div class="zig-price">— R$ 35 —</div>
+                </div>
+            </article>
+    
+            <hr class="zig-sep">
+    
+            <h2 class="zig-section-title">Pratos Principais</h2>
+    
+            <!-- PARMEGIANA FRANGO -->
+            <article class="zig-row">
+                <div class="zig-media">
+                    <img src="img/Menu1.png" alt="Parmegiana de frango com arroz e batata frita"
+                        loading="lazy" width="1280" height="720">
+                </div>
+                <div class="zig-body">
+                    <h3 class="zig-title">Parmegiana — Frango</h3>
+                    <p class="zig-desc">Clássico da casa. Acompanha arroz e batata frita.</p>
+                    <div class="zig-price">— R$ 52 —</div>
+                </div>
+            </article>
+    
+            <!-- PARMEGIANA BOI -->
+            <article class="zig-row is-right">
+                <div class="zig-media">
+                    <img src="img/Menu1.2.png" alt="Parmegiana de boi com arroz e batata frita" loading="lazy" width="1280" height="720">
+                </div>
+                <div class="zig-body">
+                    <h3 class="zig-title">Parmegiana — <br> Boi</h3>
+                    <p class="zig-desc">Bife de boi empanado, molho de tomate e queijo gratinado. Acompanha arroz e batata
+                        frita.</p>
+                    <div class="zig-price">— R$ 54 —</div>
+                </div>
+            </article>
+    
+            <!-- PARMEGIANA PEIXE -->
+            <article class="zig-row">
+                <div class="zig-media">
+                    <img src="img/Menu1.3.png" alt="Parmegiana de peixe com arroz e batata frita"
+                        loading="lazy" width="1280" height="720">
+                </div>
+                <div class="zig-body">
+                    <h3 class="zig-title">Parmegiana — <br>Peixe</h3>
+                    <p class="zig-desc">Filé de pescada empanado com molho da casa e queijo derretido. Acompanha arroz e
+                        batata frita.</p>
+                    <div class="zig-price">— R$ 56 —</div>
+                </div>
+            </article>
+    
+            <!-- PARMEGIANA CAMARÃO -->
+            <article class="zig-row is-right">
+                <div class="zig-media">
+                    <img src="img/Menu1.4.png" alt="Parmegiana de camarão com arroz e batata frita"
+                        loading="lazy" width="1280" height="720">
+                </div>
+                <div class="zig-body">
+                    <h3 class="zig-title">Parmegiana — Camarão</h3>
+                    <p class="zig-desc">Camarões empanados no molho de tomate, cobertos com queijo gratinado. Acompanha
+                        arroz e batata frita.</p>
+                    <div class="zig-price">— R$ 58 —</div>
+                </div>
+            </article>
+    
+            <!-- STROGONOFF FRANGO -->
+            <article class="zig-row">
+                <div class="zig-media">
+                    <img src="img/Menu2.png" alt="Strogonoff de frango com arroz e batata palha"
+                        loading="lazy" width="1280" height="720">
+                </div>
+                <div class="zig-body">
+                    <h3 class="zig-title">Strogonoff — Frango</h3>
+                    <p class="zig-desc">Cremoso e perfumado. <br>Acompanha arroz branco e batata palha caseira.</p>
+                    <div class="zig-price">— R$ 50 —</div>
+                </div>
+            </article>
+    
+            <!-- STROGONOFF BOI -->
+            <article class="zig-row is-right">
+                <div class="zig-media">
+                    <img src="img/Menu2.1.png" alt="Strogonoff de boi com arroz e batata palha" loading="lazy" width="1280" height="720">
+                </div>
+                <div class="zig-body">
+                    <h3 class="zig-title">Strogonoff — <br>Boi</h3>
+                    <p class="zig-desc">Tiras de carne, cogumelos e creme. <br>Acompanha arroz e batata palha da casa.</p>
+                    <div class="zig-price">— R$ 52 —</div>
+                </div>
+            </article>
+    
+            <!-- Brasileirinho -->
+            <article class="zig-row">
+                <div class="zig-media">
+                    <img src="img/Menu3.png"
+                        alt="Brasileirinho: carne de boi empanada ou grelhada com acompanhamentos" loading="lazy" width="1280" height="720">
+                </div>
+                <div class="zig-body">
+                    <h3 class="zig-title">Brasileirinho</h3>
+                    <p class="zig-desc">Carne de boi empanada ou grelhada. Salada, arroz, feijão, farofa e batata frita ou
+                        legumes.</p>
+                    <div class="zig-price">— R$ 42 —</div>
+                </div>
+            </article>
+    
+            <!-- Bife a Cavalo -->
+            <article class="zig-row is-right">
+                <div class="zig-media">
+                    <img src="img/Menu4.png" alt="Bife a cavalo com salada, arroz, feijão e ovo frito"
+                        loading="lazy" width="1280" height="720">
+                </div>
+                <div class="zig-body">
+                    <h3 class="zig-title">Bife a Cavalo</h3>
+                    <p class="zig-desc">Carne de boi, ovo frito, salada, arroz, feijão, farofa e batata frita.</p>
+                    <div class="zig-price">— R$ 45 —</div>
+                </div>
+            </article>
+    
+            <!-- Convento da Penha -->
+            <article class="zig-row">
+                <div class="zig-media">
+                    <img src="img/Menu5.png"
+                        alt="Convento da Penha: linguiça de porco com acompanhamentos" loading="lazy" width="1280" height="720">
+                </div>
+                <div class="zig-body">
+                    <h3 class="zig-title">Convento da Penha</h3>
+                    <p class="zig-desc">Linguiça de porco. Salada, arroz, feijão, farofa e batata frita.</p>
+                    <div class="zig-price">— R$ 35 —</div>
+                </div>
+            </article>
+    
+            <!-- Farol de Santa Luzia -->
+            <article class="zig-row is-right">
+                <div class="zig-media">
+                    <img src="img/Menu6.png"
+                        alt="Farol de Santa Luzia: filé de frango empanado ou grelhado com acompanhamentos" loading="lazy" width="1280" height="720">
+                </div>
+                <div class="zig-body">
+                    <h3 class="zig-title">Farol de Santa Luzia</h3>
+                    <p class="zig-desc">Filé de frango empanado ou grelhado. Arroz, farofa, feijão e batata frita ou
+                        legumes.</p>
+                    <div class="zig-price">— R$ 40 —</div>
+                </div>
+            </article>
+    
+            <!-- Prainha -->
+            <article class="zig-row">
+                <div class="zig-media">
+                    <img src="img/Menu7.png" alt="Prainha: filé de pescada empanado ou grelhado com acompanhamentos"
+                        loading="lazy" width="1280" height="720">
+                </div>
+                <div class="zig-body">
+                    <h3 class="zig-title">Prainha</h3>
+                    <p class="zig-desc">Filé de pescada empanado ou grelhado. Arroz, farofa e batata frita ou legumes
+                        salteados.</p>
+                    <div class="zig-price">— R$ 44 —</div>
+                </div>
+            </article>
+    
+        </div>
+    </section>
+
+    <section id="extras" class="m-menu" aria-label="Cardápio">
+        <div class="m-wrap">
+            <nav class="m-tabs" role="tablist" aria-label="Categorias do cardápio">
+                <button class="m-tab is-active" role="tab" aria-controls="m-pane-prot" aria-selected="true"
+                id="m-tab-prot">Proteína</button>
+                <button class="m-tab" role="tab" aria-controls="m-pane-acomp" aria-selected="false"
+                id="m-tab-acomp">Acompanhamentos</button>
+                <button class="m-tab" role="tab" aria-controls="m-pane-beb" aria-selected="false"
+                id="m-tab-beb">Bebidas</button>
+                <button class="m-tab" role="tab" aria-controls="m-pane-sob" aria-selected="false"
+                id="m-tab-sob">Sobremesa</button>
+                <i class="m-ink"></i>
+            </nav>
+
+            <div class="m-panes">
+                <section class="m-pane is-active" id="m-pane-prot" role="tabpanel" aria-labelledby="m-tab-prot">
+                    <ul class="m-list">
+                        <li><span class="m-name">Carne de boi</span><span class="m-price">R$19</span></li>
+                        <li><span class="m-name">Carne de frango</span><span class="m-price">R$15</span></li>
+                        <li><span class="m-name">Peixe</span><span class="m-price">R$22</span></li>
+                        <li><span class="m-name">Linguiça</span><span class="m-price">R$12</span></li>
+                        <li><span class="m-name">Ovo</span><span class="m-price">R$5</span></li>
+                        <li><span class="m-name">Camarão</span><span class="m-price">R$24</span></li>
+                    </ul>
+                </section>
+
+                <section class="m-pane" id="m-pane-acomp" role="tabpanel" aria-labelledby="m-tab-acomp">
+                    <ul class="m-list">
+                        <li><span class="m-name">Batata frita (200g)</span><span class="m-price">R$15</span></li>
+                        <li><span class="m-name">Arroz</span><span class="m-price">R$9</span></li>
+                        <li><span class="m-name">Feijão</span><span class="m-price">R$9</span></li>
+                        <li><span class="m-name">Salada</span><span class="m-price">R$6</span></li>
+                        <li><span class="m-name">Farofa</span><span class="m-price">R$6</span></li>
+                        <li><span class="m-name">Legumes salteados</span><span class="m-price">R$10</span></li>
+                        <li><span class="m-name">Molho pesto</span><span class="m-price">R$12</span></li>
+                        <li><span class="m-name">Parmesão ralado</span><span class="m-price">R$5</span></li>
+                        <li><span class="m-name">Mel picante</span><span class="m-price">R$4</span></li>
+                        <li><span class="m-name">Aioli de páprica</span><span class="m-price">R$5</span></li>
+                    </ul>
+                </section>
+
+                <section class="m-pane" id="m-pane-beb" role="tabpanel" aria-labelledby="m-tab-beb">
+                    <ul class="m-list">
+                        <li><span class="m-name">Coca-Cola</span><span class="m-price">R$7</span></li>
+                        <li><span class="m-name">Coca-Cola Zero</span><span class="m-price">R$7</span></li>
+                        <li><span class="m-name">Guaraná</span><span class="m-price">R$7</span></li>
+                        <li><span class="m-name">Guaraná Zero</span><span class="m-price">R$7</span></li>
+                        <li><span class="m-name">Fanta Laranja</span><span class="m-price">R$7</span></li>
+                        <li><span class="m-name">Fanta Uva</span><span class="m-price">R$7</span></li>
+                        <li><span class="m-name">Sprite</span><span class="m-price">R$7</span></li>
+                        <li><span class="m-name">Sprite Zero</span><span class="m-price">R$7</span></li>
+                        <li class="m-note"><span class="m-name">Sucos - Tradicionais e Especiais.</span><span
+                            class="m-price">R$10/12</span></li>
+                        <li><span class="m-name">Guaravita</span><span class="m-price">R$5</span></li>
+                        <li><span class="m-name">Água s/ gás</span><span class="m-price">R$4</span></li>
+                        <li><span class="m-name">Água c/ gás</span><span class="m-price">R$5</span></li>
+                        <li><span class="m-name">Cerveja long neck</span><span class="m-price">R$12</span></li>
+                        <li><span class="m-name">Long neck especial</span><span class="m-price">R$15</span></li>
+                        <li><span class="m-name">Long neck s/ álcool</span><span class="m-price">R$12</span></li>
+                    </ul>
+                </section>
+
+                <section class="m-pane" id="m-pane-sob" role="tabpanel" aria-labelledby="m-tab-sob">
+                    <ul class="m-list">
+                        <li>
+                            <span class="m-name">Sobremesa da casa
+                            <em class="m-desc">— Sorvete de café, creme de baunilha <br> e crocante.</em></span>
+                            <span class="m-price">R$15</span>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- GALERIA — AMBIENTE (abaixo das abas) -->
+    <section class="gallery" aria-label="Galeria do Empório Convento">
+    
+        <div class="gallery-marquee" role="list">
+            <!-- faixa 1 -->
+            <div class="gallery-track" aria-hidden="false">
+                <figure class="gallery-item" role="listitem">
+                    <img src="img/Galeria1.png" alt="Parmegiana de Frango" loading="lazy">
+                </figure>
+                <figure class="gallery-item" role="listitem">
+                    <img src="img/Galeria2.png" alt="Parmegiana de camarão." loading="lazy">
+                </figure>
+                <figure class="gallery-item" role="listitem">
+                    <img src="img/Galeria3.png" alt="Strogonoff de Frango." loading="lazy">
+                </figure>
+                <figure class="gallery-item" role="listitem">
+                    <img src="img/Galeria4.png" alt="Parmegiana de Boi." loading="lazy">
+                </figure>
+                <figure class="gallery-item" role="listitem">
+                    <img src="img/Galeria5.png" alt="Prainha ao fundo" loading="lazy">
+                </figure>
+            </div>
+    
+            <!-- faixa 2 (clonada p/ loop contínuo) -->
+            <div class="gallery-track" aria-hidden="true">
+                <figure class="gallery-item">
+                    <img src="img/Galeria6.png" alt="Strognoff de Camarão." loading="lazy">
+                </figure>
+                <figure class="gallery-item">
+                    <img src="img/Galeria7.png" alt="Pasta." loading="lazy">
+                </figure>
+                <figure class="gallery-item">
+                    <img src="img/Galeria9.png" alt="Parmegiana." loading="lazy">
+                </figure>
+                <figure class="gallery-item">
+                    <img src="img/Galeria10.png" alt="Almoço em familía." loading="lazy">
+                </figure>
+                <figure class="gallery-item">
+                    <img src="img/Galeria11.png" alt="Parmegiana e Salada." loading="lazy">
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ RESERVAS ============ -->
+    <section id="reservas" class="booking" aria-label="Reservas">
+        <div class="booking-wrap">
+            <header class="booking-head">
+                <h2>Reservas</h2>
+                <p>Preencha os dados abaixo. Você será direcionado ao WhatsApp com a mensagem pronta.</p>
+            </header>
+    
+            <form id="bookingForm" class="booking-card" autocomplete="on" novalidate>
+                <!-- Nome / Telefone -->
+                <div class="grid two">
+                    <label class="field">
+                        <span class="label">Nome</span>
+                        <input type="text" name="nome" placeholder="Seu nome completo" required>
+                    </label>
+    
+                    <label class="field">
+                        <span class="label">Telefone</span>
+                        <input type="tel" name="telefone" placeholder="(27) 9 9999-9999" inputmode="tel" required>
+                    </label>
+                </div>
+    
+                <!-- Data / Hora / Pessoas -->
+                <div class="grid three">
+                    <label class="field">
+                        <span class="label">Data</span>
+                        <input type="date" name="data" required>
+                    </label>
+    
+                    <label class="field">
+                        <span class="label">Hora</span>
+                        <input type="time" name="hora" required>
+                    </label>
+    
+                    <label class="field">
+                        <span class="label">Pessoas</span>
+                        <input type="number" name="pessoas" min="1" max="20" value="2" required>
+                    </label>
+                </div>
+    
+                <!-- Observações -->
+                <label class="field">
+                    <span class="label">Observações</span>
+                    <textarea name="obs" rows="4"
+                        placeholder="Preferência de mesa, restrições, aniversariante, etc."></textarea>
+                </label>
+    
+                <!-- Ação -->
+                <div class="booking-actions">
+                    <button type="submit" class="btn-wa">
+                        Reservar
+                        <svg width="17" height="17" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill="currentColor"
+                                d="M20.52 3.48A11.86 11.86 0 0 0 12.05.04 12 12 0 0 0 2.1 18.19L.04 24l5.95-2.06a12 12 0 0 0 6.06 1.63h.01A12 12 0 0 0 24 11.95a11.86 11.86 0 0 0-3.48-8.47m-8.47 18.4a9.8 9.8 0 0 1-5-1.37l-.36-.21-3.54 1.23 1.19-3.45l-.23-.37a9.82 9.82 0 1 1 18.28-5.2a9.83 9.83 0 0 1-9.34 9.37m5.38-7.35c-.29-.15-1.72-.85-1.98-.95c-.26-.1-.45-.15-.64.15c-.19.29-.74.95-.91 1.14c-.17.19-.34.22-.63.08c-.29-.15-1.21-.45-2.31-1.43c-.86-.76-1.44-1.7-1.61-1.99c-.17-.29-.02-.45.13-.6c.13-.13.29-.34.43-.51c.14-.17.19-.29.29-.48c.1-.19.05-.36-.02-.51c-.07-.15-.64-1.54-.88-2.11c-.23-.56-.47-.48-.64-.48h-.55c-.19 0-.51.07-.78.36c-.26.29-1.02 1-1.02 2.42c0 1.42 1.04 2.79 1.18 2.98c.15.19 2.05 3.13 4.96 4.39c.69.3 1.23.48 1.65.61c.69.22 1.31.19 1.8.11c.55-.08 1.72-.7 1.97-1.37c.24-.67.24-1.24.17-1.36c-.07-.12-.26-.19-.55-.34" />
+                        </svg>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section class="instagram">
+        <div class="insta-hero">
+            <img class="ig-glyph" src="img/icon/1-0303d790.ico" alt="Instagram">
+            
+            <h2>Follow Us on Instagram!</h2>
+        
+            <div class="insta-profile">
+                <img class="insta-avatar" src="img/Untitled design (2).png" alt="@emporio.convento">
+                <div class="insta-meta">
+                    <div class="name">Empório Convento</div>
+                    <div class="handle">@emporio.convento</div>
+                </div>
+        
+                <div class="insta-stats">
+                    <span><strong>16</strong><small>Posts</small></span>
+                    <span><strong>2.703K</strong><small>Followers</small></span>
+                    <span><strong>2</strong><small>Following</small></span>
+                </div>
+        
+                <a href="https://www.instagram.com/emporio.convento/" target="_blank" class="btn-follow" rel="noopener">
+                    <img src="img/icon/instagram (1).png" alt="Instagram" class="ig-img">
+                    <span>Follow</span>
+                </a>
+            </div>
+        </div>
+
+    
+        <!-- ⬇️ Este contenedor es imprescindible -->
+        <div class="insta-feed">
+            <figure class="insta-item">
+                <img src="img/insta/Insta1.jpg" alt="Publicação do Empório Convento" loading="lazy">
+                <a class="insta-link" href="https://www.instagram.com/p/DOG1mpOAEYP/" target="_blank"
+                    aria-label="Abrir no Instagram"></a>
+            </figure>
+    
+            <figure class="insta-item is-video">
+                <video src="img/insta/Insta2.mp4" preload="none" muted playsinline></video>
+                <button class="insta-play" aria-label="Reproduzir/pausar"></button>
+                <a class="insta-link" href="https://www.instagram.com/p/DNiqpmvgJeN/?img_index=2" target="_blank"
+                    aria-label="Abrir no Instagram"></a>
+            </figure>
+    
+            <figure class="insta-item">
+                <img src="img/insta/Insta3.png" alt="Publicação do Empório Convento" loading="lazy">
+                <a class="insta-link" href="#" target="_blank" aria-label="Abrir no Instagram"></a>
+            </figure>
+    
+            <figure class="insta-item is-video">
+                <video src="img/insta/Insta4.mp4" preload="none" muted playsinline></video>
+                <button class="insta-play" aria-label="Reproduzir/pausar"></button>
+                <a class="insta-link" href="https://www.instagram.com/p/DL8GPGVpl4l/?img_index=2" target="_blank"
+                    aria-label="Abrir no Instagram"></a>
+            </figure>
+    
+            <figure class="insta-item is-video">
+                <video src="img/insta/Insta5.mp4" preload="none" muted playsinline></video>
+                <button class="insta-play" aria-label="Reproduzir/pausar"></button>
+                <a class="insta-link" href="https://www.instagram.com/p/DN8OBBmgFPx/?img_index=3" target="_blank"
+                    aria-label="Abrir no Instagram"></a>
+            </figure>
+
+            <figure class="insta-item">
+                <img src="img/insta/Insta6.png" alt="Publicação do Empório Convento" loading="lazy">
+                <a class="insta-link" href="#" target="_blank" aria-label="Abrir no Instagram"></a>
+            </figure>
+
+            <figure class="insta-item">
+                <img src="img/insta/insta7.jpg" alt="Publicação do Empório Convento" loading="lazy">
+                <a class="insta-link" href="#" target="_blank" aria-label="Abrir no Instagram"></a>
+            </figure>
+
+            <figure class="insta-item">
+                <img src="img/insta/Insta8.jpeg" alt="Publicação do Empório Convento" loading="lazy">
+                <a class="insta-link" href="#" target="_blank" aria-label="Abrir no Instagram"></a>
+            </figure>
+        </div> 
+    </section>
+
+    <!-- ===== INFO (solo texto) ===== -->
+    <section id="info" class="info-blk" aria-label="Informações">
+        <div class="info-wrap">
+            <header class="info-head">
+                <h2>INFORMAÇÕES</h2>
+                <p class="info-sub">Prainha, Vila Velha — ES</p>
+            </header>
+    
+            <div class="info-text">
+                <p><strong>Horário de Funcionamento</strong><br> Quarta à sexta de 11h às 15h<br> Sábado e domingo de 11h às 15:30h</p>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- ===== CONTATO ===== -->
+    <section id="contato" class="contact">
+        <div class="contact-wrap">
+    
+            <!-- Mapa -->
+            <div class="contact-map">
+                <iframe src="https://www.google.com/maps/embed?pb=TU_CODIGO_EMBED" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade" allowfullscreen>
+                </iframe>
+
+            </div>
+    
+            <!-- Info + Redes -->
+            <div class="contact-info">
+                <h2>CONTATO</h2>
+                <p>Fale conosco ou trace a rota até o Empório.</p>
+                <div class="contact-details">
+                    <p><img src="img/icon/mapa.ico" alt="Mapa"> Prainha, Vila Velha — ES</p>
+                    <p><img src="img/icon/llamar.ico" alt="Telefone"> (27) 99999-9999</p>
+                    <p><img src="img/icon/email.ico" alt="E-mail"> contato@emporioconvento.com.br</p>
+                </div>
+            
+                <div class="social-icons">
+                    <a href="https://wa.me/5527999999999" target="_blank" aria-label="WhatsApp">
+                        <img src="img/icon/whatsapp.ico" alt="WhatsApp">
+                    </a>
+                    <a href="https://www.instagram.com/emporio.convento/" target="_blank" aria-label="Instagram">
+                        <img src="img/icon/1-0303d790.ico" alt="Instagram">
+                    </a>
+                    <a href="https://www.facebook.com/emporioconvento" target="_blank" aria-label="Facebook">
+                        <img src="img/icon/facebook.ico" alt="Facebook">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer" id="footer">
+        <div class="ft-wrap">
+            <!-- Columna 1: Marca -->
+            <section class="ft-col">
+                <div class="ft-brand">
+                    <img src="img/logo.png" alt="Empório Convento" class="ft-logo">
+                    <div class="ft-brand-text">
+                        <span class="ft-name">EMPÓRIO CONVENTO</span>
+                        <div class="ft-legal">
+                            <a href="/politica-privacidade.html">Política de Privacidade</a>
+                            <a href="/cookies.html">Política de Cookies</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+    
+            <!-- Columna 2: Horário -->
+            <section class="ft-col">
+                <h3 class="ft-title">Horário</h3>
+                <ul class="ft-list">
+                    <li>Quarta a Sexta 11h — 15h</li>
+                    <li>Sábado & Domingo 11h — 15:30h</li>
+                </ul>
+                <small class="ft-note">Reservas pelo WhatsApp.</small>
+            </section>
+    
+            <!-- Columna 3: Endereço / Contato -->
+            <section class="ft-col">
+                <h3 class="ft-title">Aqui te esperamos</h3>
+    
+                <div class="ft-actions">
+                    <a class="ft-btn" href="https://maps.google.com/?q=Emp%C3%B3rio%20Convento" target="_blank"
+                        rel="noopener">Como chegar</a>
+                </div>
+            </section>
+        </div>
+    
+        <div class="ft-bottom">
+            <small>© <span id="year"></span> Empório Convento. Todos os direitos reservados.</small>
+            <small><a href="#menu">Cardápio</a> · <a href="#reservas">Reservas</a> · <a href="#contato">Contato</a></small>
+        </div>
+    </footer>
+
+    <!-- Botón flotante WhatsApp (solo icono) -->
+    <a id="wa-float" class="wa-fab" href="#" target="_blank" rel="noopener noreferrer"
+        aria-label="Abrir WhatsApp do Empório Convento">
+        <svg viewBox="0 0 32 32" width="26" height="26" aria-hidden="true">
+            <path fill="currentColor"
+                d="M19.11 17.45c-.29-.14-1.66-.82-1.92-.91c-.26-.1-.45-.14-.64.14c-.19.29-.73.91-.9 1.1c-.17.19-.33.21-.62.07c-.29-.14-1.23-.45-2.34-1.42c-.86-.75-1.45-1.67-1.62-1.96c-.17-.29-.02-.44.13-.59c.13-.13.29-.33.43-.5c.14-.17.19-.29.29-.47c.1-.19.05-.35-.02-.5c-.07-.14-.62-1.51-.86-2.06c-.23-.55-.46-.47-.64-.47h-.55c-.19 0-.5.07-.77.35c-.26.29-1.01.99-1.01 2.39c0 1.4 1.03 2.75 1.17 2.94c.15.18 2.03 3.09 4.91 4.33c.68.3 1.22.47 1.63.6c.68.21 1.29.19 1.77.11c.54-.08 1.7-.69 1.94-1.35c.24-.66.24-1.22.16-1.34c-.07-.12-.25-.19-.54-.33zM16.02 3.2c-6.98 0-12.64 5.66-12.64 12.64c0 2.23.59 4.32 1.62 6.13L3 29l7.22-1.89a12.56 12.56 0 0 0 5.8 1.46c6.98 0 12.64-5.66 12.64-12.64S23 3.2 16.02 3.2zm0 22.72c-2.18 0-4.2-.64-5.9-1.75l-.42-.27l-4.39 1.15l1.18-4.28l-.28-.44a10.5 10.5 0 1 1 9.8 5.59z" />
+        </svg>
+    </a>
+
+
+    
+    <script>
+        // año automático en el copyright
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+    <script src="js/main.js"></script>
+
+
+</body>
+
+</html>
