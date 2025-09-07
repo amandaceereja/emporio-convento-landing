@@ -1,6 +1,7 @@
 # Empório Convento — Landing Page
 
-[![Live Demo](https://img.shields.io/badge/Live_Demo-Visit-2ea44f)](https://TU-USUARIO.github.io/TU-REPO/)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Open_site-28a745?style=for-the-badge)](https://amandaceereja.github.io/emporio-convento-landing/)
+
 
 Landing page **mobile-first** para Empório Convento orientada a **conversión** (reservas y pedidos por WhatsApp).  
 Incluye héroe ilustrado, menú en zig-zag, galería, módulo de reservas, bloque de Instagram, mapa y **CTA flotante de WhatsApp**.
@@ -54,6 +55,7 @@ Incluye héroe ilustrado, menú en zig-zag, galería, módulo de reservas, bloqu
 └── README.md
 
 
+
 ## Breakpoints (sin interferencias)
 
 El proyecto separa estilos por rangos para evitar solapes entre “móvil grande” y “tablet”:
@@ -66,14 +68,11 @@ El proyecto separa estilos por rangos para evitar solapes entre “móvil grande
 
 ## Preview
 
+<!-- Usa una imagen real (mockup/screenshot), no la URL del sitio -->
 <p align="center">
-  <a href="https://TU-USUARIO.github.io/TU-REPO/" target="_blank" rel="noopener noreferrer">
-    <img alt="Live Demo" src="https://img.shields.io/badge/Live%20Demo-Open%20site-28a745?style=for-the-badge">
+  <a href="https://amandaceereja.github.io/emporio-convento-landing/" target="_blank" rel="noopener noreferrer">
+    <img src="img/preview/EmporioConventoMockup1.png" alt="Empório Convento — mockup responsive 1" width="900">
   </a>
-</p>
-
-<p align="center">
-  <img src="img/preview/EmporioConventoMockup1.png" alt="Empório Convento — mockup responsive 1" width="900">
 </p>
 
 <p align="center">
@@ -84,7 +83,8 @@ El proyecto separa estilos por rangos para evitar solapes entre “móvil grande
   <summary><strong>🎬 Ver video MP4 (click para desplegar)</strong></summary>
 
   <p align="center">
-    <video controls muted playsinline style="max-width:100%; height:auto; border-radius:12px;">
+    <video src="https://github.com/amandaceereja/emporio-convento-landing/blob/main/img/preview/EmporioConventoMockup.mp4?raw=1"
+           controls muted playsinline style="max-width:100%; height:auto; border-radius:12px; outline:none;">
       <source src="img/preview/EmporioConventoMockup.mp4" type="video/mp4">
       Tu navegador no soporta video embebido.
     </video>
@@ -92,19 +92,27 @@ El proyecto separa estilos por rangos para evitar solapes entre “móvil grande
 
   <p align="center">
     Si no ves el reproductor, abre el video directamente:
-    <a href="https://raw.githubusercontent.com/TU-USUARIO/TU-REPO/main/img/preview/EmporioConventoMockup.mp4">raw MP4</a>
+    <a href="https://github.com/amandaceereja/emporio-convento-landing/blob/main/img/preview/EmporioConventoMockup.mp4?raw=1">raw MP4</a>
   </p>
 </details>
 
+
+
 ---
+## Live Demo
+
+https://amandaceereja.github.io/emporio-convento-landing/
+
+Sitio estático desplegado con GitHub Pages.
 
 ## License
 
-Este proyecto fue desarrollado con fines **educativos y de portafolio**.  
-Puedes utilizarlo y adaptarlo libremente, pero el uso **comercial sin autorización** está prohibido.
+Este proyecto fue desarrollado con fines educativos y de portafolio.
+Puedes utilizarlo y adaptarlo libremente, pero el uso comercial sin autorización está prohibido.
 
 ## Author
 
-Desarrollado por: **Amanda Cereja**  
-GitHub: [@amandaceereja](https://github.com/amandaceereja)  
+Desarrollado por: Amanda Cereja
+GitHub: @amandaceereja
+
 Contacto: amandacereja027@outlook.com

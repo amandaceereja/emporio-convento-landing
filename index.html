@@ -10,19 +10,19 @@
         content="Restaurante Empório Convento — cozinha caseira capixaba. Cardápio, reservas pelo WhatsApp e localização.">
     <meta name="keywords" content="restaurante, Vila Velha, capixaba, almoço, reservas">
 
-
-    <!-- Fonts (troca fácil): Kalam = traço manuscrito; Oswald = alternativa sólida -->
+    <!-- Preconnect + 1 única chamada de Google Fonts (swap) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Oswald:wght@500;700&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kalam:wght@400;700&family=Marcellus&family=Oswald:wght@500;700&family=Quicksand:wght@400;600&display=swap"
         rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 
-
-
+    <!-- Preload do CSS + uso normal (melhora LCP) -->
+    <link rel="preload" as="style" href="css/styles.css">
     <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- Preload da imagem principal do herói -->
+    <link rel="preload" as="image" href="img/bannertransparente.png">
 </head>
 
 <body>
@@ -30,7 +30,8 @@
     <header id="topo" class="navbar" aria-label="Navegação principal">
         <nav class="nav-inner">
             <a class="brand" href="#topo" aria-label="Empório Convento">
-                <img src="img/logo.png" alt="Logo Empório Convento" class="brand-logo">
+                <img src="img/logo.png" alt="Logo Empório Convento" class="brand-logo" decoding="async"
+                    fetchpriority="high">
             </a>
             <ul class="nav-links">
                 <li><a href="#info" class="nav-link">Info</a></li>
@@ -43,64 +44,62 @@
 
     <!-- BANNER -->
     <section class="hero-banner">
-        <img class="hero-sky" src="img/cielo.png" alt="" aria-hidden="true" />
+        <img class="hero-sky" src="img/cielo.png" alt="" aria-hidden="true" decoding="async" loading="eager">
         <div class="hero-content">
             <a href="#menu" class="cta">Menu</a>
         </div>
-        <img src="img/bannertransparente.png" alt="Convento e coqueiros" class="hero-figure">
+
+        <!-- Imagem crítica do herói -->
+        <img src="img/bannertransparente.png" alt="Convento e coqueiros" class="hero-figure" decoding="async"
+            fetchpriority="high">
+
         <div class="hero-title">
-            <h1><span class="emp">Empório</span>
-            <span class="conv">Convento</span></h1>
+            <h1><span class="emp">Empório</span><span class="conv">Convento</span></h1>
             <p>Cozinha capixaba com sabor de casa</p>
         </div>
     </section>
 
-
-    <!-- ============ MENU ZIGZAG (estilo Via Real) ============ -->
+    <!-- ============ MENU ZIGZAG ============ -->
     <section id="menu" class="zig-menu" aria-label="Cardápio">
         <div class="zig-wrap">
-    
+
             <h2 class="zig-section-title">Entradas</h2>
-    
+
             <!-- ENTRADA 1 -->
             <article class="zig-row">
                 <div class="zig-media">
-                    <img src="img/Entrante1.png" alt="Peixe empanado com pesto, mel picante e parmesão"
-                        loading="lazy" width="1280" height="720">
+                    <img src="img/Entrante1.png" alt="Peixe empanado com pesto, mel picante e parmesão" loading="lazy"
+                        decoding="async" width="1280" height="720">
                 </div>
                 <div class="zig-body">
                     <h3 class="zig-title">Peixe Empanado</h3>
-                    <p class="zig-desc">
-                        Filé de pescada empanado acompanha pesto, mel picante e parmesão.
-                    </p>
+                    <p class="zig-desc">Filé de pescada empanado acompanha pesto, mel picante e parmesão.</p>
                     <div class="zig-price">— R$ 45 —</div>
                 </div>
             </article>
-    
-            <!-- ENTRADA 2 (imagen a la derecha) -->
+
+            <!-- ENTRADA 2 -->
             <article class="zig-row is-right">
                 <div class="zig-media">
-                    <img src="img/Entrante2.png" alt="Batata frita 300g com aioli de pápricas"
-                        loading="lazy" width="1280" height="720">
+                    <img src="img/Entrante2.png" alt="Batata frita 300g com aioli de pápricas" loading="lazy"
+                        decoding="async" width="1280" height="720">
                 </div>
                 <div class="zig-body">
                     <h3 class="zig-title">Batata Frita (300g)</h3>
-                    <p class="zig-desc">
-                        Acompanha aioli de mix de pápricas.
-                    </p>
+                    <p class="zig-desc">Acompanha aioli de mix de pápricas.</p>
                     <div class="zig-price">— R$ 35 —</div>
                 </div>
             </article>
-    
+
             <hr class="zig-sep">
-    
+
             <h2 class="zig-section-title">Pratos Principais</h2>
-    
+
             <!-- PARMEGIANA FRANGO -->
             <article class="zig-row">
                 <div class="zig-media">
-                    <img src="img/Menu1.png" alt="Parmegiana de frango com arroz e batata frita"
-                        loading="lazy" width="1280" height="720">
+                    <img src="img/Menu1.png" alt="Parmegiana de frango com arroz e batata frita" loading="lazy"
+                        decoding="async" width="1280" height="720">
                 </div>
                 <div class="zig-body">
                     <h3 class="zig-title">Parmegiana — Frango</h3>
@@ -108,25 +107,26 @@
                     <div class="zig-price">— R$ 52 —</div>
                 </div>
             </article>
-    
+
             <!-- PARMEGIANA BOI -->
             <article class="zig-row is-right">
                 <div class="zig-media">
-                    <img src="img/Menu1.2.png" alt="Parmegiana de boi com arroz e batata frita" loading="lazy" width="1280" height="720">
+                    <img src="img/Menu1.2.png" alt="Parmegiana de boi com arroz e batata frita" loading="lazy"
+                        decoding="async" width="1280" height="720">
                 </div>
                 <div class="zig-body">
                     <h3 class="zig-title">Parmegiana — <br> Boi</h3>
-                    <p class="zig-desc">Bife de boi empanado, molho de tomate e queijo gratinado. Acompanha arroz e batata
-                        frita.</p>
+                    <p class="zig-desc">Bife de boi empanado, molho de tomate e queijo gratinado. Acompanha arroz e
+                        batata frita.</p>
                     <div class="zig-price">— R$ 54 —</div>
                 </div>
             </article>
-    
+
             <!-- PARMEGIANA PEIXE -->
             <article class="zig-row">
                 <div class="zig-media">
-                    <img src="img/Menu1.3.png" alt="Parmegiana de peixe com arroz e batata frita"
-                        loading="lazy" width="1280" height="720">
+                    <img src="img/Menu1.3.png" alt="Parmegiana de peixe com arroz e batata frita" loading="lazy"
+                        decoding="async" width="1280" height="720">
                 </div>
                 <div class="zig-body">
                     <h3 class="zig-title">Parmegiana — <br>Peixe</h3>
@@ -135,12 +135,12 @@
                     <div class="zig-price">— R$ 56 —</div>
                 </div>
             </article>
-    
+
             <!-- PARMEGIANA CAMARÃO -->
             <article class="zig-row is-right">
                 <div class="zig-media">
-                    <img src="img/Menu1.4.png" alt="Parmegiana de camarão com arroz e batata frita"
-                        loading="lazy" width="1280" height="720">
+                    <img src="img/Menu1.4.png" alt="Parmegiana de camarão com arroz e batata frita" loading="lazy"
+                        decoding="async" width="1280" height="720">
                 </div>
                 <div class="zig-body">
                     <h3 class="zig-title">Parmegiana — Camarão</h3>
@@ -149,12 +149,12 @@
                     <div class="zig-price">— R$ 58 —</div>
                 </div>
             </article>
-    
+
             <!-- STROGONOFF FRANGO -->
             <article class="zig-row">
                 <div class="zig-media">
-                    <img src="img/Menu2.png" alt="Strogonoff de frango com arroz e batata palha"
-                        loading="lazy" width="1280" height="720">
+                    <img src="img/Menu2.png" alt="Strogonoff de frango com arroz e batata palha" loading="lazy"
+                        decoding="async" width="1280" height="720">
                 </div>
                 <div class="zig-body">
                     <h3 class="zig-title">Strogonoff — Frango</h3>
@@ -162,38 +162,41 @@
                     <div class="zig-price">— R$ 50 —</div>
                 </div>
             </article>
-    
+
             <!-- STROGONOFF BOI -->
             <article class="zig-row is-right">
                 <div class="zig-media">
-                    <img src="img/Menu2.1.png" alt="Strogonoff de boi com arroz e batata palha" loading="lazy" width="1280" height="720">
+                    <img src="img/Menu2.1.png" alt="Strogonoff de boi com arroz e batata palha" loading="lazy"
+                        decoding="async" width="1280" height="720">
                 </div>
                 <div class="zig-body">
                     <h3 class="zig-title">Strogonoff — <br>Boi</h3>
-                    <p class="zig-desc">Tiras de carne, cogumelos e creme. <br>Acompanha arroz e batata palha da casa.</p>
+                    <p class="zig-desc">Tiras de carne, cogumelos e creme. <br>Acompanha arroz e batata palha da casa.
+                    </p>
                     <div class="zig-price">— R$ 52 —</div>
                 </div>
             </article>
-    
+
             <!-- Brasileirinho -->
             <article class="zig-row">
                 <div class="zig-media">
-                    <img src="img/Menu3.png"
-                        alt="Brasileirinho: carne de boi empanada ou grelhada com acompanhamentos" loading="lazy" width="1280" height="720">
+                    <img src="img/Menu3.png" alt="Brasileirinho: carne de boi empanada ou grelhada com acompanhamentos"
+                        loading="lazy" decoding="async" width="1280" height="720">
                 </div>
                 <div class="zig-body">
                     <h3 class="zig-title">Brasileirinho</h3>
-                    <p class="zig-desc">Carne de boi empanada ou grelhada. Salada, arroz, feijão, farofa e batata frita ou
+                    <p class="zig-desc">Carne de boi empanada ou grelhada. Salada, arroz, feijão, farofa e batata frita
+                        ou
                         legumes.</p>
                     <div class="zig-price">— R$ 42 —</div>
                 </div>
             </article>
-    
+
             <!-- Bife a Cavalo -->
             <article class="zig-row is-right">
                 <div class="zig-media">
-                    <img src="img/Menu4.png" alt="Bife a cavalo com salada, arroz, feijão e ovo frito"
-                        loading="lazy" width="1280" height="720">
+                    <img src="img/Menu4.png" alt="Bife a cavalo com salada, arroz, feijão e ovo frito" loading="lazy"
+                        decoding="async" width="1280" height="720">
                 </div>
                 <div class="zig-body">
                     <h3 class="zig-title">Bife a Cavalo</h3>
@@ -201,12 +204,12 @@
                     <div class="zig-price">— R$ 45 —</div>
                 </div>
             </article>
-    
+
             <!-- Convento da Penha -->
             <article class="zig-row">
                 <div class="zig-media">
-                    <img src="img/Menu5.png"
-                        alt="Convento da Penha: linguiça de porco com acompanhamentos" loading="lazy" width="1280" height="720">
+                    <img src="img/Menu5.png" alt="Convento da Penha: linguiça de porco com acompanhamentos"
+                        loading="lazy" decoding="async" width="1280" height="720">
                 </div>
                 <div class="zig-body">
                     <h3 class="zig-title">Convento da Penha</h3>
@@ -214,12 +217,13 @@
                     <div class="zig-price">— R$ 35 —</div>
                 </div>
             </article>
-    
+
             <!-- Farol de Santa Luzia -->
             <article class="zig-row is-right">
                 <div class="zig-media">
                     <img src="img/Menu6.png"
-                        alt="Farol de Santa Luzia: filé de frango empanado ou grelhado com acompanhamentos" loading="lazy" width="1280" height="720">
+                        alt="Farol de Santa Luzia: filé de frango empanado ou grelhado com acompanhamentos"
+                        loading="lazy" decoding="async" width="1280" height="720">
                 </div>
                 <div class="zig-body">
                     <h3 class="zig-title">Farol de Santa Luzia</h3>
@@ -228,12 +232,12 @@
                     <div class="zig-price">— R$ 40 —</div>
                 </div>
             </article>
-    
+
             <!-- Prainha -->
             <article class="zig-row">
                 <div class="zig-media">
                     <img src="img/Menu7.png" alt="Prainha: filé de pescada empanado ou grelhado com acompanhamentos"
-                        loading="lazy" width="1280" height="720">
+                        loading="lazy" decoding="async" width="1280" height="720">
                 </div>
                 <div class="zig-body">
                     <h3 class="zig-title">Prainha</h3>
@@ -242,7 +246,7 @@
                     <div class="zig-price">— R$ 44 —</div>
                 </div>
             </article>
-    
+
         </div>
     </section>
 
@@ -250,13 +254,13 @@
         <div class="m-wrap">
             <nav class="m-tabs" role="tablist" aria-label="Categorias do cardápio">
                 <button class="m-tab is-active" role="tab" aria-controls="m-pane-prot" aria-selected="true"
-                id="m-tab-prot">Proteína</button>
+                    id="m-tab-prot">Proteína</button>
                 <button class="m-tab" role="tab" aria-controls="m-pane-acomp" aria-selected="false"
-                id="m-tab-acomp">Acompanhamentos</button>
+                    id="m-tab-acomp">Acompanhamentos</button>
                 <button class="m-tab" role="tab" aria-controls="m-pane-beb" aria-selected="false"
-                id="m-tab-beb">Bebidas</button>
+                    id="m-tab-beb">Bebidas</button>
                 <button class="m-tab" role="tab" aria-controls="m-pane-sob" aria-selected="false"
-                id="m-tab-sob">Sobremesa</button>
+                    id="m-tab-sob">Sobremesa</button>
                 <i class="m-ink"></i>
             </nav>
 
@@ -298,7 +302,7 @@
                         <li><span class="m-name">Sprite</span><span class="m-price">R$7</span></li>
                         <li><span class="m-name">Sprite Zero</span><span class="m-price">R$7</span></li>
                         <li class="m-note"><span class="m-name">Sucos - Tradicionais e Especiais.</span><span
-                            class="m-price">R$10/12</span></li>
+                                class="m-price">R$10/12</span></li>
                         <li><span class="m-name">Guaravita</span><span class="m-price">R$5</span></li>
                         <li><span class="m-name">Água s/ gás</span><span class="m-price">R$4</span></li>
                         <li><span class="m-name">Água c/ gás</span><span class="m-price">R$5</span></li>
@@ -312,7 +316,7 @@
                     <ul class="m-list">
                         <li>
                             <span class="m-name">Sobremesa da casa
-                            <em class="m-desc">— Sorvete de café, creme de baunilha <br> e crocante.</em></span>
+                                <em class="m-desc">— Sorvete de café, creme de baunilha <br> e crocante.</em></span>
                             <span class="m-price">R$15</span>
                         </li>
                     </ul>
@@ -321,46 +325,42 @@
         </div>
     </section>
 
-
-    <!-- GALERIA — AMBIENTE (abaixo das abas) -->
+    <!-- GALERIA — AMBIENTE -->
     <section class="gallery" aria-label="Galeria do Empório Convento">
-    
         <div class="gallery-marquee" role="list">
-            <!-- faixa 1 -->
             <div class="gallery-track" aria-hidden="false">
                 <figure class="gallery-item" role="listitem">
-                    <img src="img/Galeria1.png" alt="Parmegiana de Frango" loading="lazy">
+                    <img src="img/Galeria1.png" alt="Parmegiana de Frango" loading="lazy" decoding="async">
                 </figure>
                 <figure class="gallery-item" role="listitem">
-                    <img src="img/Galeria2.png" alt="Parmegiana de camarão." loading="lazy">
+                    <img src="img/Galeria2.png" alt="Parmegiana de camarão." loading="lazy" decoding="async">
                 </figure>
                 <figure class="gallery-item" role="listitem">
-                    <img src="img/Galeria3.png" alt="Strogonoff de Frango." loading="lazy">
+                    <img src="img/Galeria3.png" alt="Strogonoff de Frango." loading="lazy" decoding="async">
                 </figure>
                 <figure class="gallery-item" role="listitem">
-                    <img src="img/Galeria4.png" alt="Parmegiana de Boi." loading="lazy">
+                    <img src="img/Galeria4.png" alt="Parmegiana de Boi." loading="lazy" decoding="async">
                 </figure>
                 <figure class="gallery-item" role="listitem">
-                    <img src="img/Galeria5.png" alt="Prainha ao fundo" loading="lazy">
+                    <img src="img/Galeria5.png" alt="Prainha ao fundo" loading="lazy" decoding="async">
                 </figure>
             </div>
-    
-            <!-- faixa 2 (clonada p/ loop contínuo) -->
+
             <div class="gallery-track" aria-hidden="true">
                 <figure class="gallery-item">
-                    <img src="img/Galeria6.png" alt="Strognoff de Camarão." loading="lazy">
+                    <img src="img/Galeria6.png" alt="Strognoff de Camarão." loading="lazy" decoding="async">
                 </figure>
                 <figure class="gallery-item">
-                    <img src="img/Galeria7.png" alt="Pasta." loading="lazy">
+                    <img src="img/Galeria7.png" alt="Pasta." loading="lazy" decoding="async">
                 </figure>
                 <figure class="gallery-item">
-                    <img src="img/Galeria9.png" alt="Parmegiana." loading="lazy">
+                    <img src="img/Galeria9.png" alt="Parmegiana." loading="lazy" decoding="async">
                 </figure>
                 <figure class="gallery-item">
-                    <img src="img/Galeria10.png" alt="Almoço em familía." loading="lazy">
+                    <img src="img/Galeria10.png" alt="Almoço em familía." loading="lazy" decoding="async">
                 </figure>
                 <figure class="gallery-item">
-                    <img src="img/Galeria11.png" alt="Parmegiana e Salada." loading="lazy">
+                    <img src="img/Galeria11.png" alt="Parmegiana e Salada." loading="lazy" decoding="async">
                 </figure>
             </div>
         </div>
@@ -373,47 +373,43 @@
                 <h2>Reservas</h2>
                 <p>Preencha os dados abaixo. Você será direcionado ao WhatsApp com a mensagem pronta.</p>
             </header>
-    
+
             <form id="bookingForm" class="booking-card" autocomplete="on" novalidate>
-                <!-- Nome / Telefone -->
                 <div class="grid two">
                     <label class="field">
                         <span class="label">Nome</span>
                         <input type="text" name="nome" placeholder="Seu nome completo" required>
                     </label>
-    
+
                     <label class="field">
                         <span class="label">Telefone</span>
                         <input type="tel" name="telefone" placeholder="(27) 9 9999-9999" inputmode="tel" required>
                     </label>
                 </div>
-    
-                <!-- Data / Hora / Pessoas -->
+
                 <div class="grid three">
                     <label class="field">
                         <span class="label">Data</span>
                         <input type="date" name="data" required>
                     </label>
-    
+
                     <label class="field">
                         <span class="label">Hora</span>
                         <input type="time" name="hora" required>
                     </label>
-    
+
                     <label class="field">
                         <span class="label">Pessoas</span>
                         <input type="number" name="pessoas" min="1" max="20" value="2" required>
                     </label>
                 </div>
-    
-                <!-- Observações -->
+
                 <label class="field">
                     <span class="label">Observações</span>
                     <textarea name="obs" rows="4"
                         placeholder="Preferência de mesa, restrições, aniversariante, etc."></textarea>
                 </label>
-    
-                <!-- Ação -->
+
                 <div class="booking-actions">
                     <button type="submit" class="btn-wa">
                         Reservar
@@ -429,58 +425,57 @@
 
     <section class="instagram">
         <div class="insta-hero">
-            <img class="ig-glyph" src="img/icon/1-0303d790.ico" alt="Instagram">
-            
+            <img class="ig-glyph" src="img/icon/1-0303d790.ico" alt="Instagram" decoding="async">
             <h2>Follow Us on Instagram!</h2>
-        
+
             <div class="insta-profile">
-                <img class="insta-avatar" src="img/Untitled design (2).png" alt="@emporio.convento">
+                <img class="insta-avatar" src="img/Untitled design (2).png" alt="@emporio.convento" decoding="async"
+                    loading="lazy">
                 <div class="insta-meta">
                     <div class="name">Empório Convento</div>
                     <div class="handle">@emporio.convento</div>
                 </div>
-        
+
                 <div class="insta-stats">
                     <span><strong>16</strong><small>Posts</small></span>
                     <span><strong>2.703K</strong><small>Followers</small></span>
                     <span><strong>2</strong><small>Following</small></span>
                 </div>
-        
+
                 <a href="https://www.instagram.com/emporio.convento/" target="_blank" class="btn-follow" rel="noopener">
-                    <img src="img/icon/instagram (1).png" alt="Instagram" class="ig-img">
+                    <img src="img/icon/instagram (1).png" alt="Instagram" class="ig-img" decoding="async">
                     <span>Follow</span>
                 </a>
             </div>
         </div>
 
-    
-        <!-- ⬇️ Este contenedor es imprescindible -->
+        <!-- Feed -->
         <div class="insta-feed">
             <figure class="insta-item">
-                <img src="img/insta/Insta1.jpg" alt="Publicação do Empório Convento" loading="lazy">
+                <img src="img/insta/Insta1.jpg" alt="Publicação do Empório Convento" loading="lazy" decoding="async">
                 <a class="insta-link" href="https://www.instagram.com/p/DOG1mpOAEYP/" target="_blank"
                     aria-label="Abrir no Instagram"></a>
             </figure>
-    
+
             <figure class="insta-item is-video">
                 <video src="img/insta/Insta2.mp4" preload="none" muted playsinline></video>
                 <button class="insta-play" aria-label="Reproduzir/pausar"></button>
                 <a class="insta-link" href="https://www.instagram.com/p/DNiqpmvgJeN/?img_index=2" target="_blank"
                     aria-label="Abrir no Instagram"></a>
             </figure>
-    
+
             <figure class="insta-item">
-                <img src="img/insta/Insta3.png" alt="Publicação do Empório Convento" loading="lazy">
+                <img src="img/insta/Insta3.png" alt="Publicação do Empório Convento" loading="lazy" decoding="async">
                 <a class="insta-link" href="#" target="_blank" aria-label="Abrir no Instagram"></a>
             </figure>
-    
+
             <figure class="insta-item is-video">
                 <video src="img/insta/Insta4.mp4" preload="none" muted playsinline></video>
                 <button class="insta-play" aria-label="Reproduzir/pausar"></button>
                 <a class="insta-link" href="https://www.instagram.com/p/DL8GPGVpl4l/?img_index=2" target="_blank"
                     aria-label="Abrir no Instagram"></a>
             </figure>
-    
+
             <figure class="insta-item is-video">
                 <video src="img/insta/Insta5.mp4" preload="none" muted playsinline></video>
                 <button class="insta-play" aria-label="Reproduzir/pausar"></button>
@@ -489,49 +484,47 @@
             </figure>
 
             <figure class="insta-item">
-                <img src="img/insta/Insta6.png" alt="Publicação do Empório Convento" loading="lazy">
+                <img src="img/insta/Insta6.png" alt="Publicação do Empório Convento" loading="lazy" decoding="async">
                 <a class="insta-link" href="#" target="_blank" aria-label="Abrir no Instagram"></a>
             </figure>
 
             <figure class="insta-item">
-                <img src="img/insta/insta7.jpg" alt="Publicação do Empório Convento" loading="lazy">
+                <img src="img/insta/insta7.jpg" alt="Publicação do Empório Convento" loading="lazy" decoding="async">
                 <a class="insta-link" href="#" target="_blank" aria-label="Abrir no Instagram"></a>
             </figure>
 
             <figure class="insta-item">
-                <img src="img/insta/Insta8.jpeg" alt="Publicação do Empório Convento" loading="lazy">
+                <img src="img/insta/Insta8.jpeg" alt="Publicação do Empório Convento" loading="lazy" decoding="async">
                 <a class="insta-link" href="#" target="_blank" aria-label="Abrir no Instagram"></a>
             </figure>
-        </div> 
+        </div>
     </section>
 
-    <!-- ===== INFO (solo texto) ===== -->
+    <!-- ===== INFO ===== -->
     <section id="info" class="info-blk" aria-label="Informações">
         <div class="info-wrap">
             <header class="info-head">
                 <h2>INFORMAÇÕES</h2>
                 <p class="info-sub">Prainha, Vila Velha — ES</p>
             </header>
-    
+
             <div class="info-text">
-                <p><strong>Horário de Funcionamento</strong><br> Quarta à sexta de 11h às 15h<br> Sábado e domingo de 11h às 15:30h</p>
+                <p><strong>Horário de Funcionamento</strong><br> Quarta à sexta de 11h às 15h<br> Sábado e domingo de
+                    11h às 15:30h</p>
             </div>
         </div>
     </section>
 
-    
     <!-- ===== CONTATO ===== -->
     <section id="contato" class="contact">
         <div class="contact-wrap">
-    
+
             <!-- Mapa -->
             <div class="contact-map">
                 <iframe src="https://www.google.com/maps/embed?pb=TU_CODIGO_EMBED" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade" allowfullscreen>
-                </iframe>
-
+                    referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
             </div>
-    
+
             <!-- Info + Redes -->
             <div class="contact-info">
                 <h2>CONTATO</h2>
@@ -541,7 +534,7 @@
                     <p><img src="img/icon/llamar.ico" alt="Telefone"> (27) 99999-9999</p>
                     <p><img src="img/icon/email.ico" alt="E-mail"> contato@emporioconvento.com.br</p>
                 </div>
-            
+
                 <div class="social-icons">
                     <a href="https://wa.me/5527999999999" target="_blank" aria-label="WhatsApp">
                         <img src="img/icon/whatsapp.ico" alt="WhatsApp">
@@ -559,10 +552,10 @@
 
     <footer class="site-footer" id="footer">
         <div class="ft-wrap">
-            <!-- Columna 1: Marca -->
+            <!-- Coluna 1: Marca -->
             <section class="ft-col">
                 <div class="ft-brand">
-                    <img src="img/logo.png" alt="Empório Convento" class="ft-logo">
+                    <img src="img/logo.png" alt="Empório Convento" class="ft-logo" decoding="async" loading="lazy">
                     <div class="ft-brand-text">
                         <span class="ft-name">EMPÓRIO CONVENTO</span>
                         <div class="ft-legal">
@@ -573,8 +566,7 @@
                 </div>
             </section>
 
-    
-            <!-- Columna 2: Horário -->
+            <!-- Coluna 2: Horário -->
             <section class="ft-col">
                 <h3 class="ft-title">Horário</h3>
                 <ul class="ft-list">
@@ -583,25 +575,25 @@
                 </ul>
                 <small class="ft-note">Reservas pelo WhatsApp.</small>
             </section>
-    
-            <!-- Columna 3: Endereço / Contato -->
+
+            <!-- Coluna 3: Endereço / Contato -->
             <section class="ft-col">
                 <h3 class="ft-title">Aqui te esperamos</h3>
-    
                 <div class="ft-actions">
                     <a class="ft-btn" href="https://maps.google.com/?q=Emp%C3%B3rio%20Convento" target="_blank"
                         rel="noopener">Como chegar</a>
                 </div>
             </section>
         </div>
-    
+
         <div class="ft-bottom">
             <small>© <span id="year"></span> Empório Convento. Todos os direitos reservados.</small>
-            <small><a href="#menu">Cardápio</a> · <a href="#reservas">Reservas</a> · <a href="#contato">Contato</a></small>
+            <small><a href="#menu">Cardápio</a> · <a href="#reservas">Reservas</a> · <a
+                    href="#contato">Contato</a></small>
         </div>
     </footer>
 
-    <!-- Botón flotante WhatsApp (solo icono) -->
+    <!-- Botão flutuante WhatsApp -->
     <a id="wa-float" class="wa-fab" href="#" target="_blank" rel="noopener noreferrer"
         aria-label="Abrir WhatsApp do Empório Convento">
         <svg viewBox="0 0 32 32" width="26" height="26" aria-hidden="true">
@@ -610,16 +602,13 @@
         </svg>
     </a>
 
-
-    
     <script>
-        // año automático en el copyright
+        // ano automático
         document.getElementById('year').textContent = new Date().getFullYear();
     </script>
 
-    <script src="js/main.js"></script>
-
-
+    <!-- Defer para não bloquear o parser -->
+    <script src="js/main.js" defer></script>
 </body>
 
 </html>
